@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/ceb4a4b326.js" crossorigin="anonymous"></script>
     <title>TPO - Comisión 22534</title>
+    <link rel="stylesheet" href="bootstrap-5.2.1-dist/css/bootstrap.css">
+    <script src="bootstrap-5.2.1-dist/js/bootstrap.bundle.js"></script>
+	
 </head>
 <body>
 
@@ -44,9 +47,90 @@
         		<section>
 
         			<div class="container">
-        				<div class="cont">Contenido con grid</div>
-        				<div class="cont2">Publicidad? con grid</div>
-        			</div>
+        				 <form class="row mt-3 g-3 needs-validation" novalidate>
+
+                  <div class="col-6 positionrelative">  
+                      <label for="nameId" class="form-label">Nombre</label>
+                      <input type="text" class="form-control" id="nameId" required>
+                      <div class="valid-tooltip">
+                        Todo bien
+                      </div>
+                      <div class="invalid-tooltip">
+                        Es necesario poner el nombre
+                      </div>
+                  </div>
+
+                  
+                    
+                  <div class="col-6 position-relative"  >
+                      <label for="surnameId" class="form-label">Apellido</label>
+                      <input type="text" class="form-control" id="surnameId" required>
+                      <div class="valid-tooltip">
+                        Todo bien
+                      </div>
+                      <div class="invalid-tooltip">
+                        Es necesario poner el Apellido
+                      </div>
+                  </div>
+                      
+                  <div class="col-9 position-relative"  >
+                    <label for="mailId" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="mailId" required>
+                    <div class="valid-tooltip">
+                      Todo bien
+                    </div>
+                    <div class="invalid-tooltip">
+                      Es necesario poner el mail
+                    </div>
+                </div>
+
+                  <div class="col-12 position-relative" >
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="terms" required>
+                        <label for="terms"  class="form-check-label"> Acepto los términos</label>
+                        <div class="valid-tooltip">
+                          Todo bien
+                          <div class="invalid-tooltip">
+                            Es necesario aceptar los términos
+                          </div>
+                        </div>
+                    </div>
+
+                      <button type="submit" class="btn btn-primary">Enviar</button>
+
+
+
+                    </div>  
+
+
+                  </div>
+                  <script>
+                    // Example starter JavaScript for disabling form submissions if there are invalid fields
+(() => {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  const forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
+      }
+
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
+                  </script>
+
+
+                </form>
+        				
+                </div>
+        			
         			
         		</section>
 
